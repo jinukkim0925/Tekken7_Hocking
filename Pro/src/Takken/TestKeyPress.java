@@ -50,7 +50,7 @@ public class TestKeyPress implements NativeKeyListener, NativeMouseInputListener
 		//u : 85 i : 73 j : 74 k : 75 o : 79 l : 76
 		
 		if (e.getKeyCode() == NativeKeyEvent.VC_Z) { //근너클
-//			chopoug();
+			//chopoug();
 			KeyPress(68);
 			KeyPress(68);
 			try {
