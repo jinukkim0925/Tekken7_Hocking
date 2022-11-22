@@ -50,18 +50,18 @@ public class TestKeyPress implements NativeKeyListener, NativeMouseInputListener
 		//u : 85 i : 73 j : 74 k : 75 o : 79 l : 76
 		
 		if (e.getKeyCode() == NativeKeyEvent.VC_Z) { //근너클
-//			chopoug();b
-			KeyPress(68);
-			KeyPress(68);
-			try {
-				Robot r = new Robot();
-				Thread.sleep(18);
-				r.keyPress(68);
-				KeyPress(73);
-				r.keyRelease(68);
-			} catch (Exception e2) {
-				// TODO: handle exception
-			}
+			chopoug();
+//			KeyPress(68);
+//			KeyPress(68);
+//			try {
+//				Robot r = new Robot();
+//				Thread.sleep(18);
+//				r.keyPress(68);
+//				KeyPress(73);
+//				r.keyRelease(68);
+//			} catch (Exception e2) {
+//				// TODO: handle exception
+//			}
 		}else if (e.getKeyCode() == NativeKeyEvent.VC_X) {
 
 //			chopoug();
