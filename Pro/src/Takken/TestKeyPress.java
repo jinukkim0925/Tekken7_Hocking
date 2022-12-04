@@ -51,32 +51,15 @@ public class TestKeyPress implements NativeKeyListener, NativeMouseInputListener
 		
 		if (e.getKeyCode() == NativeKeyEvent.VC_Z) { //근너클
 			chopoug();
-//			KeyPress(68);
-//			KeyPress(68);
-//			try {
-//				Robot r = new Robot();
-//				Thread.sleep(18);
-//				r.keyPress(68);
-//				KeyPress(73);
-//				r.keyRelease(68);
-//			} catch (Exception e2) {
-//				// TODO: handle exception
-//			}
+			//ragi();
+//			bunner();
 		}else if (e.getKeyCode() == NativeKeyEvent.VC_X) {
-
 //			chopoug();
-//			chopouglong();
-			KeyPress(65);
-			KeyPress(65);
-			try {
-				Robot r = new Robot();
-				Thread.sleep(18);
-				r.keyPress(65);
-				KeyPress(73);
-				r.keyRelease(65);
-			} catch (Exception e2) {
-				// TODO: handle exception
-			}
+			chopouglong();
+			
+//			bunnerri();
+		}else if (e.getKeyCode() == NativeKeyEvent.VC_C) {
+			asdf();
 		}
 
 		if (e.getKeyCode() == NativeKeyEvent.VC_ESCAPE) {
@@ -89,45 +72,72 @@ public class TestKeyPress implements NativeKeyListener, NativeMouseInputListener
 		}
 	}
 	
-	public void chopouglong() { //초풍
-//		OPkeycom(6);
+	public void chopouglong() { //대쉬 초풍
 		keycom(6);
-		OPkeycom(6);
-
+		
+		OPkeycom(3);
+//		OPkeycom(6);
+		//OnKeyNowPress(73);
+		//OnKeyNowRea(73);
+		
 		try {
-			Thread.sleep(200);
+			Thread.sleep(105);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		ORNowkeycom(3);
+		chopoug();
+		//ORNowkeycom(6);
+		//OnKeyNowPress(73);
+		//OnKeyNowRea(73);
 		
-		ORkeycom(6);
-		OPkeycom(2);
-		
-		OPkeycom(3);
-		
-		OnKeyNowPress(73);
-		OnKeyRea(73);
-		
-		ORkeycom(2);
-		ORkeycom(3);
 		try {
-			Thread.sleep(700);
+			Thread.sleep(50);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 	
+	public void asdf() { //초풍
+		keycom(6);
+		OPkeycom(3);
+//		OPkeycom(6);
+		OnKeyNowPress(74);
+		OnKeyNowRea(74);
+		ORkeycom(3);
+		//OPkeycom(2);
+		//OPkeycom(6);
+		
+		//OnKeyNowPress(73);
+		//ORNowkeycom(2);
+		//ORNowkeycom(3);
+		//OnKeyNowNowRea(73);
+		
+		try {
+			Thread.sleep(540);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
 	public void chopoug() { //초풍
 		keycom(6);
-		OPkeycom(2);
 		OPkeycom(3);
-		
+//		OPkeycom(6);
 		OnKeyNowPress(73);
-		ORNowkeycom(2);
-		ORNowkeycom(3);
-		OnKeyNowNowRea(73);
+		OnKeyNowRea(73);
+		ORkeycom(3);
+		//OPkeycom(2);
+		//OPkeycom(6);
+		
+		//OnKeyNowPress(73);
+		//ORNowkeycom(2);
+		//ORNowkeycom(3);
+		//OnKeyNowNowRea(73);
 		
 		try {
 			Thread.sleep(540);
@@ -192,31 +202,31 @@ public class TestKeyPress implements NativeKeyListener, NativeMouseInputListener
 		}
 	}
 	public void bunner() {
-//    	if (e.getKeyCode() == NativeKeyEvent.VC_Z) { //근너클
-//			KeyPress(68);
-//			KeyPress(68);
-//			try {
-//				Robot r = new Robot();
-//				Thread.sleep(18);
-//				r.keyPress(68);
-//				KeyPress(73);
-//				r.keyRelease(68);
-//			} catch (Exception e2) {
-//				// TODO: handle exception
-//			}
-//		}else if (e.getKeyCode() == NativeKeyEvent.VC_X) {
-//			KeyPress(65);
-//			KeyPress(65);
-//			try {
-//				Robot r = new Robot();
-//				Thread.sleep(18);
-//				r.keyPress(65);
-//				KeyPress(73);
-//				r.keyRelease(65);
-//			} catch (Exception e2) {
-//				// TODO: handle exception
-//			}
-//		}
+		KeyPress(68);
+		KeyPress(68);
+		try {
+			Robot r = new Robot();
+			Thread.sleep(18);
+			r.keyPress(68);
+			KeyPress(73);
+			r.keyRelease(68);
+		} catch (Exception e2) {
+			// TODO: handle exception
+		}
+	}
+	
+	public void bunnerri() {
+		KeyPress(65);
+		KeyPress(65);
+		try {
+			Robot r = new Robot();
+			Thread.sleep(18);
+			r.keyPress(65);
+			KeyPress(73);
+			r.keyRelease(65);
+		} catch (Exception e2) {
+			// TODO: handle exception
+		}
 	}
 	
 	public void ORkeycom(int key) {
@@ -262,8 +272,8 @@ public class TestKeyPress implements NativeKeyListener, NativeMouseInputListener
 	public void OnKeyNowPress(int key) {
 		try {
 			Robot r = new Robot();
-			Thread.sleep(5);
 			r.keyPress(key);
+			Thread.sleep(5);
 		} catch (Exception e2) {
 			// TODO: handle exception
 		}
@@ -394,7 +404,7 @@ public class TestKeyPress implements NativeKeyListener, NativeMouseInputListener
 	public void OnDKeyPress(int key, int key2) {
 		try {
 			Robot r = new Robot();
-			Thread.sleep(15);
+			Thread.sleep(16);
 			r.keyPress(key);
 			r.keyPress(key2);
 		} catch (Exception e2) {
@@ -405,7 +415,7 @@ public class TestKeyPress implements NativeKeyListener, NativeMouseInputListener
 	public void OnKeyPress(int key) {
 		try {
 			Robot r = new Robot();
-			Thread.sleep(15);
+			Thread.sleep(16);
 			r.keyPress(key);
 		} catch (Exception e2) {
 			// TODO: handle exception
@@ -415,7 +425,7 @@ public class TestKeyPress implements NativeKeyListener, NativeMouseInputListener
 	public void OnDKeyRea(int key, int key2) {
 		try {
 			Robot r = new Robot();
-			Thread.sleep(19);
+			Thread.sleep(16);
 			r.keyRelease(key);
 			r.keyRelease(key2);
 		} catch (Exception e2) {
@@ -426,7 +436,7 @@ public class TestKeyPress implements NativeKeyListener, NativeMouseInputListener
 	public void OnKeyRea(int key) {
 		try {
 			Robot r = new Robot();
-			Thread.sleep(19);
+			Thread.sleep(16);
 			r.keyRelease(key);
 		} catch (Exception e2) {
 			// TODO: handle exception
@@ -436,10 +446,10 @@ public class TestKeyPress implements NativeKeyListener, NativeMouseInputListener
 	public void DKeyPress(int key, int key2) {
 		try {
 			Robot r = new Robot();
-			Thread.sleep(18);
+			Thread.sleep(16);
 			r.keyPress(key);
 			r.keyPress(key2);
-			Thread.sleep(19);
+			Thread.sleep(16);
 			r.keyRelease(key);
 			r.keyRelease(key2);
 		} catch (Exception e2) {
@@ -450,9 +460,9 @@ public class TestKeyPress implements NativeKeyListener, NativeMouseInputListener
 	public void KeyPress(int key) {
 		try {
 			Robot r = new Robot();
-			Thread.sleep(18);
+			Thread.sleep(16);
 			r.keyPress(key);
-			Thread.sleep(19);
+			Thread.sleep(16);
 			r.keyRelease(key);
 		} catch (Exception e2) {
 			// TODO: handle exception
