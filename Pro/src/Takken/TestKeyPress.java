@@ -76,7 +76,7 @@ public class TestKeyPress implements NativeKeyListener, NativeMouseInputListener
 		keycom(6);
 		
 		OPkeycom(3);
-//		OPkeycom(6);
+		OPkeycom(6);
 		//OnKeyNowPress(73);
 		//OnKeyNowRea(73);
 		
