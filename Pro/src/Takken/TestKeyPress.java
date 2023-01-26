@@ -50,18 +50,20 @@ public class TestKeyPress implements NativeKeyListener, NativeMouseInputListener
 		//u : 85 i : 73 j : 74 k : 75 o : 79 l : 76
 		
 		if (e.getKeyCode() == NativeKeyEvent.VC_Z) { //근너클
-			chopoug();
+//			chopoug();
 			//ragi();
-//			bunner();
+			bunner();
 		}else if (e.getKeyCode() == NativeKeyEvent.VC_X) {
 //			chopoug();
-			chopouglong();
+//			chopouglong();
 			
-//			bunnerri();
+			bunnerri();
 		}else if (e.getKeyCode() == NativeKeyEvent.VC_C) {
-			asdf();
+//			asdf();
+		}else if (e.getKeyCode() == NativeKeyEvent.VC_Q) {
+//			narak();
 		}
-
+		
 		if (e.getKeyCode() == NativeKeyEvent.VC_ESCAPE) {
 			try {
 				GlobalScreen.unregisterNativeHook();
@@ -76,7 +78,7 @@ public class TestKeyPress implements NativeKeyListener, NativeMouseInputListener
 		keycom(6);
 		
 		OPkeycom(3);
-		OPkeycom(6);
+		//OPkeycom(6);
 		//OnKeyNowPress(73);
 		//OnKeyNowRea(73);
 		
@@ -146,6 +148,31 @@ public class TestKeyPress implements NativeKeyListener, NativeMouseInputListener
 			e.printStackTrace();
 		}
 	}
+	
+	public void narak() { //초풍
+		keycom(6);
+		OPkeycom(3);
+//		OPkeycom(6);
+		OnKeyNowPress(75);
+		OnKeyNowRea(75);
+		ORkeycom(3);
+		//OPkeycom(2);
+		//OPkeycom(6);
+		
+		//OnKeyNowPress(73);
+		//ORNowkeycom(2);
+		//ORNowkeycom(3);
+		//OnKeyNowNowRea(73);
+		OnKeyNowPress(79);
+		OnKeyNowRea(79);
+		try {
+			Thread.sleep(540);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
 	
 	public void ragi() { //기스 레이지 스톰
 		OPkeycom(1);
